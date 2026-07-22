@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>情報セキュリティ方針 - 株式会社Sfinity</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #EFEFEF;
+      scroll-behavior: smooth;
+      font-family: 'Inter', 'DM Sans', sans-serif;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ヘッダー */
+    .header {
+      width: 100%;
+      min-height: 92px;
+      padding: 16px 32px;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-item {
+      color: black;
+      font-size: 18px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* フッター */
+    .footer {
+      width: 100%;
+      min-height: 222px;
+      padding: 60px 32px 32px 32px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 65px;
+      box-sizing: border-box;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .footer-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ==========================================
+       レスポンシブ対応 (画面幅 768px 以下)
+    ========================================== */
+    @media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        height: auto;
+      }
+
+      .nav-list {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-item {
+        font-size: 15px;
+      }
+
+      .footer-inner {
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; position: relative; box-sizing: border-box;">
+  
+  <header class="header">
+    <a href="index.html" style="display: flex; align-items: center; gap: 8px;">
+      <img src="images/仮ロゴ.png" alt="Sfinity Logo" style="width: 30px; height: 30px; object-fit: contain; flex-shrink: 0;">
+      <div style="color: #9100FF; font-size: 28px; font-weight: 700; line-height: 1;">Sfinity</div>
+    </a>
+    
+    <nav class="nav-list">
+      <a href="https://sfinity.co.jp/news" class="nav-item">ニュース</a>
+      <a href="index.html#services" class="nav-item">事業概要</a>
+      <a href="index.html#company" class="nav-item">会社概要</a>
+      <a href="index.html#contact" class="nav-item">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <div style="width: 100%; padding-left: 32px; padding-right: 32px; padding-top: 79px; padding-bottom: 79px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; display: flex; flex: 1; box-sizing: border-box; background-image: url('images/Background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden;">
+    <div style="width: 100%; max-width: 680px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 60px; display: flex">
+      <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
+        <div style="align-self: stretch; color: black; font-size: 64px; font-family: Inter; font-weight: 700; word-wrap: break-word">情報セキュリティ方針</div>
+        <div style="align-self: stretch; color: black; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 30px; word-wrap: break-word">
+          株式会社Sfinity（以下、当社）は、お客様からお預かりした情報資産および当社の情報資産を事故・災害・犯罪などの脅威から守り、お客様ならびに社会の信頼に応えるべく、以下の方針に基づき情報セキュリティに取り組みます。
+          <br/><br/>
+          <strong>1．経営者の責任</strong><br/>
+          当社は、経営者主導で継続的に情報セキュリティの改善・向上に努めます。
+          <br/><br/>
+          <strong>2．体制の整備とルールの遵守</strong><br/>
+          当社は、情報セキュリティの維持及び改善のための責任者を定め、情報セキュリティ対策を適切なルールとして整備し、運用します。
+          <br/><br/>
+          <strong>3．従業員の取組み</strong><br/>
+          当社の従業員は、情報セキュリティのために必要とされる知識を習得し、取り組みを確かなものにします。
+          <br/><br/>
+          <strong>4．法令及び契約上の要求事項の遵守</strong><br/>
+          当社は、情報セキュリティに関わる法令、規制、規範、契約上の義務を遵守するとともに、お客様の期待に応えます。
+          <br/><br/>
+          <strong>5．違反及び事故への対応</strong><br/>
+          当社は、情報セキュリティに関わる法令違反、契約違反及び事故が発生した場合には適切に対処し、再発防止に努めます。
+          <br/><br/>
+          <div style="text-align: right; margin-top: 24px;">
+            制定日:2026年7月24日<br/>
+            株式会社Sfinity<br/>
+            代表取締役社長 崔 陽
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="background-image: url('images/Footer.jpg');">
+    <div class="footer-inner">
+      
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <img src="images/仮ロゴ.png" alt="Sfinity Logo" style="width: 30px; height: 30px; object-fit: contain; flex-shrink: 0;">
+        <div style="color: white; font-size: 28px; font-weight: 700; line-height: 1;">Sfinity</div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="https://sfinity.co.jp/security-policy" style="color: white; font-size: 16px; line-height: 20px;">情報セキュリティ方針</a>
+          <a href="https://sfinity.co.jp/privacy-policy" style="color: white; font-size: 16px; line-height: 20px;">プライバシーポリシー</a>
+        </div>
+        <div style="color: white; font-size: 20px; font-family: Inter;">© 2026 Sfinity Co., Ltd. All Rights Reserved.</div>
+      </div>
+
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

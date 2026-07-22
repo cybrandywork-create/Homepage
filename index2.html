@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社Sfinity</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #EFEFEF;
+      scroll-behavior: smooth;
+      font-family: 'Inter', 'DM Sans', sans-serif;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 共通コンテナ */
+    .section-container {
+      width: 100%;
+      padding: 100px 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .inner-content {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    /* タイトル共通 */
+    .section-title {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    /* ヘッダー */
+    .header {
+      width: 100%;
+      min-height: 92px;
+      padding: 16px 32px;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-item {
+      color: black;
+      font-size: 18px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* メインビジュアル */
+    .hero-title {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: black;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      line-height: 30px;
+      color: black;
+    }
+
+    /* 事業概要 */
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 32px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .card {
+      width: 300px;
+      padding: 40px 30px;
+      background: white;
+      border-radius: 30px;
+      outline: 1px #FFE492 solid;
+      outline-offset: -1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      box-sizing: border-box;
+    }
+
+    /* 会社概要表 */
+    .company-row {
+      padding: 20px 100px;
+      border-top: 1px #CCCCCC solid;
+      display: flex;
+      gap: 13px;
+      box-sizing: border-box;
+    }
+
+    .company-label {
+      width: 250px;
+      color: #9100FF;
+      font-size: 18px;
+      line-height: 30px;
+      flex-shrink: 0;
+    }
+
+    .company-value {
+      flex: 1;
+      color: black;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    /* フッター */
+    .footer {
+      width: 100%;
+      min-height: 222px;
+      padding: 60px 32px 32px 32px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 65px;
+      box-sizing: border-box;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .footer-bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ==========================================
+       レスポンシブ対応 (画面幅 768px 以下)
+    ========================================== */
+    @media screen and (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        height: auto;
+      }
+
+      .nav-list {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-item {
+        font-size: 15px;
+      }
+
+      .section-container {
+        padding: 60px 20px;
+      }
+
+      .section-title, .hero-title {
+        font-size: 36px;
+      }
+
+      .hero-desc {
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      .inner-content {
+        gap: 40px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .company-row {
+        padding: 16px 10px;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .company-label {
+        width: 100%;
+        font-weight: 700;
+      }
+
+      .company-value {
+        font-size: 16px;
+      }
+
+      .footer-inner {
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      iframe {
+        height: 600px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; position: relative; box-sizing: border-box;">
+  
+  <header class="header">
+    <a href="index.html" style="display: flex; align-items: center; gap: 8px;">
+      <img src="images/仮ロゴ.png" alt="Sfinity Logo" style="width: 30px; height: 30px; object-fit: contain; flex-shrink: 0;">
+      <div style="color: #9100FF; font-size: 28px; font-weight: 700; line-height: 1;">Sfinity</div>
+    </a>
+    
+    <nav class="nav-list">
+      <a href="https://sfinity.co.jp/news" class="nav-item">ニュース</a>
+      <a href="#services" class="nav-item">事業概要</a>
+      <a href="#company" class="nav-item">会社概要</a>
+      <a href="#contact" class="nav-item">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <section class="section-container" style="background-image: url('images/Main-visual.jpg');">
+    <div class="inner-content" style="gap: 24px;">
+      <h1 class="hero-title" style="margin: 0;">挑む企業の成長を、<br/>最短ルートで加速する。</h1>
+      <p class="hero-desc" style="margin: 0;">株式会社Sfinityは、企業の課題を整理し、戦略と実行で前に進めるパートナーです。丁寧で確かな支援を提供します。</p>
+    </div>
+  </section>
+
+  <section id="services" class="section-container" style="background-image: url('images/Services.jpg');">
+    <div class="inner-content">
+      
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <h2 class="section-title" style="color: white; margin: 0;">事業概要</h2>
+        <div style="color: white; font-size: 18px; line-height: 30px;">
+          現状の課題抽出から最適なIT技術の導入までを一貫してサポートします。<br/>
+          目先の変化にとどまらず、将来の成長を見据えた「確かな成果」につながるサービスを提供しています。
+        </div>
+      </div>
+
+      <div class="cards-container">
+        
+        <div class="card">
+          <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div style="display: flex; gap: 40px; align-items: center; justify-content: center;">
+              <img src="images/laptop_windows.png" alt="laptop_windows" style="width: 50px; height: 50px; object-fit: contain;">
+              <img src="images/construction.png" alt="construction" style="width: 50px; height: 50px; object-fit: contain;">
+            </div>
+            <div style="text-align: center; color: #212529; font-size: 24px; font-weight: 700;">システム開発</div>
+          </div>
+          <div style="color: black; font-size: 16px; line-height: 22px;">
+            お客様の独自のビジネスモデルや要件を深く理解し、柔軟性と安全性を兼ね備えたITシステムを構築します。<br/><br/>
+            業務の自動化や情報の一元化による圧倒的な効率化を実現し、企業の競争力を高めるデジタル基盤を創り上げます。
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div style="display: flex; gap: 40px; align-items: center; justify-content: center;">
+              <img src="images/graph.png" alt="graph" style="width: 50px; height: 50px; object-fit: contain;">
+              <img src="images/lightbulb.png" alt="lightbulb" style="width: 50px; height: 50px; object-fit: contain;">
+            </div>
+            <div style="text-align: center; color: #212529; font-size: 24px; font-weight: 700;">コンサルティング</div>
+          </div>
+          <div style="color: black; font-size: 16px; line-height: 22px;">
+            経営課題を特定・整理し、リソースに合わせた最適な改善施策を導き出します。<br/><br/>
+            現場で機能する具体的な施策の提案から、スムーズな運用を見据えた実行計画の設計までトータルにサポートいたします。
+          </div>
+        </div>
+
+        <div class="card">
+          <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; gap: 40px; align-items: center; justify-content: center;">
+              <img src="images/building.png" alt="building" style="width: 50px; height: 50px; object-fit: contain;">
+              <img src="images/apartment.png" alt="apartment" style="width: 50px; height: 50px; object-fit: contain;">
+            </div>
+            <div style="text-align: center; color: #212529; font-size: 24px; font-weight: 700; line-height: 1.2;">不動産向け<br/>ソリューション</div>
+          </div>
+          <div style="color: black; font-size: 16px; line-height: 22px;">
+            不動産業界における豊富な知見とシステム構築のノウハウを活かし、現状の業務整理から伴走が可能です。<br/><br/>
+            仕入れから販売、プロパティマネジメントまで一気通貫で効率化し、成長を加速させる最適な仕組みを築きます。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="company" class="section-container" style="background-image: url('images/Background.jpg');">
+    <div class="inner-content">
+      
+      <h2 class="section-title" style="color: black; margin: 0;">会社概要</h2>
+
+      <div style="width: 100%; display: flex; flex-direction: column;">
+        
+        <div class="company-row">
+          <div class="company-label">社名</div>
+          <div class="company-value">株式会社Sfinity</div>
+        </div>
+
+        <div class="company-row">
+          <div class="company-label">代表者</div>
+          <div class="company-value">崔 陽（代表取締役社長）</div>
+        </div>
+
+        <div class="company-row">
+          <div class="company-label">事業内容</div>
+          <div class="company-value">
+            システム開発事業<br/>コンサルティング事業<br/>不動産向けソリューション事業
+          </div>
+        </div>
+
+        <div class="company-row">
+          <div class="company-label">所在地</div>
+          <div class="company-value">
+            〒150-0043<br/>渋谷区道玄坂1丁目10番8号渋谷道玄坂東急ビル2F-C
+          </div>
+        </div>
+
+        <div class="company-row">
+          <div class="company-label">設立</div>
+          <div class="company-value">2025年6月17日</div>
+        </div>
+
+        <div class="company-row" style="border-bottom: 1px #CCCCCC solid;">
+          <div class="company-label">資本金</div>
+          <div class="company-value">200万円</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-container" style="background-image: url('images/Background.jpg'); padding-bottom: 140px;">
+    <div class="inner-content">
+      <h2 class="section-title" style="color: black; margin: 0;">お問い合わせ</h2>
+      
+      <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+        <iframe width="640" height="480" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=un5N1n7O9kWWKlmucz87MxIhfTCz_XNBuNBr8-zxDpZUOVhMRVkwMEIxRExPWTZJMEQ2VjRPRkU2TS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; width: 100%; max-width: 640px; box-sizing: border-box;" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer" style="background-image: url('images/Footer.jpg');">
+    <div class="footer-inner">
+      
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <img src="images/仮ロゴ.png" alt="Sfinity Logo" style="width: 30px; height: 30px; object-fit: contain; flex-shrink: 0;">
+        <div style="color: white; font-size: 28px; font-weight: 700; line-height: 1;">Sfinity</div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="https://sfinity.co.jp/security-policy" style="color: white; font-size: 16px; line-height: 20px;">情報セキュリティ方針</a>
+          <a href="https://sfinity.co.jp/privacy-policy" style="color: white; font-size: 16px; line-height: 20px;">プライバシーポリシー</a>
+        </div>
+        <div style="color: white; font-size: 20px; font-family: Inter;">© 2026 Sfinity Co., Ltd. All Rights Reserved.</div>
+      </div>
+
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
